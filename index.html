@@ -2,142 +2,147 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earn $100 Daily - Limited Offer!</title>
+    <title>👉 YOU! YES YOU! CLICK NOW!</title>
     <style>
         body {
             margin: 0;
-            padding: 0;
-            font-family: 'Arial Black', sans-serif;
-            background: #111;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 20px;
+            font-family: 'Arial Black', Impact, sans-serif;
+            background: #000;
             text-align: center;
             color: white;
+            overflow-x: hidden;
         }
-        .container {
-            max-width: 600px;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        .title { 
+            font-size: 80px; 
+            font-weight: 900; 
+            margin: 0;
+            line-height: 1;
+            text-transform: uppercase;
         }
-        .title { font-size: 48px; font-weight: 900; margin: 0; }
-        .subtitle { font-size: 72px; font-weight: 900; margin: 10px 0; }
-        .cta-text { font-size: 24px; margin: 20px 0; }
+        .subtitle { 
+            font-size: 120px; 
+            font-weight: 900; 
+            margin: 10px 0;
+            line-height: 1;
+            color: #FF0000;
+            text-shadow: 0 0 30px red;
+            animation: pulse 1s infinite alternate;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+        .cta-text { 
+            font-size: 40px;
+            margin: 30px 0;
+            color: #FFD700;
+        }
         .cta-button {
             display: inline-block;
-            padding: 18px 40px;
-            font-size: 24px;
-            font-weight: bold;
+            padding: 30px 60px;
+            background: linear-gradient(90deg, #FF0000, #FF6B00);
+            color: white;
+            font-size: 50px;
+            font-weight: 900;
             text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s;
+            border-radius: 80px;
+            border: 5px solid white;
+            box-shadow: 0 0 40px red;
+            margin: 40px auto;
+            transition: all 0.2s;
         }
-        .cta-button:hover { transform: translateY(-5px); }
-        .disclaimer { font-size: 14px; opacity: 0.8; margin-top: 30px; }
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 60px #FFD700;
+        }
+        .warning {
+            font-size: 30px;
+            color: red;
+            animation: blink 0.5s infinite alternate;
+        }
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0.3; }
+        }
     </style>
 </head>
 <body>
-    <div class="container" id="main-container">
-        <h1 class="title" id="title">EARN</h1>
-        <h2 class="subtitle" id="subtitle">$100</h2>
-        <h1 class="title" id="title2">DAILY</h1>
-        
-        <p class="cta-text" id="cta-text">Start today - it's free</p>
-        
-        <a href="https://lltrco.com/?r=sandyarta" target="_blank" class="cta-button" id="cta-button">
-            👉 CLICK HERE TO CLAIM! 👈
-        </a>
-        
-        <div class="disclaimer" id="disclaimer">
-            ⏳ <span id="countdown">05:00</span> left! Join <span id="user-count">12</span> others!
-        </div>
+    <h1 class="title" id="title">WARNING</h1>
+    <h2 class="subtitle" id="subtitle">$100</h2>
+    <h1 class="title" id="title2">DAILY</h1>
+    
+    <p class="cta-text" id="cta-text">YOUR BRAIN IS SCREAMING TO CLICK!</p>
+    
+    <a href="https://lltrco.com/?r=sandyarta" class="cta-button" id="cta-button">
+        👉 SMASH THIS BUTTON NOW! 👈
+    </a>
+    
+    <div class="warning" id="disclaimer">
+        ⚠️ YOUR IP: <span id="user-ip">LOADING...</span> | ⏳ <span id="countdown">05:00</span> LEFT!
     </div>
 
     <script>
-        // Zufällige Farben generieren
-        function getRandomColor() {
-            const colors = [
-                '#FF0000', '#FF6B00', '#FFD700', '#00FF00', 
-                '#00FFFF', '#0066FF', '#9400D3', '#FF00FF'
-            ];
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
-
-        // Zufällige Texte rotieren
-        const texts = {
+        // 50+ BRUTALE TEXTVARIANTEN
+        const variants = {
             titles: [
-                "WANT", "GRAB", "GET", "STEAL", "EARN", "UNLOCK", "SECURE", "TAKE"
+                "WARNING", "ALERT", "ATTENTION", "CRITICAL", "URGENT", 
+                "FINAL NOTICE", "LAST CHANCE", "DO NOT IGNORE", "HOLY SHIT"
             ],
-            subtitles: [
-                "$100", "$500", "$1K", "CASH", "MONEY", "PROFIT", "WEALTH", "BONUS"
+            amounts: [
+                "$100", "$500", "$1,000", "$5,000", "CASH", "MILLIONS", 
+                "A FORTUNE", "YOUR DREAM LIFE", "FUCK YOU MONEY"
             ],
             ctaTexts: [
-                "Start today - it's free!",
-                "97% of people miss this!",
-                "Only for action-takers!",
-                "Your bank account will thank you!",
-                "This is not a drill!",
-                "Limited spots available!",
-                "You qualify for a secret bonus!",
-                "⚠️ WARNING: Earnings may shock you!"
+                "YOUR BRAIN IS SCREAMING TO CLICK!",
+                "THIS BUTTON WILL CHANGE YOUR LIFE!",
+                "YOU'RE 1 CLICK FROM BEING RICH!",
+                "YOUR FUTURE SELF WILL HATE YOU IF YOU DON'T!",
+                "EVERY SECOND YOU WAIT = $10 LOST!",
+                "BANKS HATE THIS BUTTON!",
+                "THIS IS ILLEGAL IN 17 COUNTRIES!",
+                "YOUR MOUSE IS MAGNETICALLY PULLED HERE!"
             ],
             buttonTexts: [
-                "👉 YES! I WANT FREE MONEY! 👈",
-                "👉 PROVE YOU'RE NOT BROKE! 👈",
-                "👉 CLICK BEFORE IT'S GONE! 👈",
-                "👉 INSTANT PAYOUT GUARANTEED! 👈",
-                "👉 YOUR FUTURE SELF WILL THANK YOU! 👈"
-            ],
-            disclaimers: [
-                "⏳ Offer expires in <span id='countdown'>05:00</span>!",
-                "🔥 <span id='user-count'>27</span> people joined today!",
-                "🚨 Last chance: <span id='countdown'>03:00</span> left!",
-                "💸 <span id='user-count'>8</span> spots remaining!"
+                "👉 SMASH THIS BUTTON NOW! 👈",
+                "👉 PROVE YOU'RE NOT A LOSER! 👈",
+                "👉 CLICK OR DIE POOR! 👈",
+                "👉 YOUR EX WILL CRY WHEN YOU CLICK! 👈",
+                "👉 THIS BUTTON SMELLS LIKE MONEY! 👈"
             ]
         };
 
-        // Zufällige Elemente anzeigen
-        function randomizeContent() {
-            // Farben setzen
-            const mainColor = getRandomColor();
-            const secondaryColor = getRandomColor();
-            document.body.style.background = `linear-gradient(135deg, ${mainColor} 0%, #000 100%)`;
-            document.getElementById('title').style.color = secondaryColor;
-            document.getElementById('subtitle').style.color = getRandomColor();
-            document.getElementById('title2').style.color = secondaryColor;
-            document.getElementById('cta-button').style.background = `linear-gradient(90deg, ${secondaryColor} 0%, ${mainColor} 100%)`;
-
-            // Texte setzen
-            document.getElementById('title').innerText = texts.titles[Math.floor(Math.random() * texts.titles.length)];
-            document.getElementById('subtitle').innerText = texts.subtitles[Math.floor(Math.random() * texts.subtitles.length)];
-            document.getElementById('cta-text').innerText = texts.ctaTexts[Math.floor(Math.random() * texts.ctaTexts.length)];
-            document.getElementById('cta-button').innerHTML = texts.buttonTexts[Math.floor(Math.random() * texts.buttonTexts.length)];
-            document.getElementById('disclaimer').innerHTML = texts.disclaimers[Math.floor(Math.random() * texts.disclaimers.length)];
+        // Zufällige Variante laden
+        function loadRandomVariant() {
+            const rnd = Math.floor(Math.random() * 50); // 50 Kombinationen
+            
+            document.getElementById("title").textContent = 
+                variants.titles[rnd % variants.titles.length];
+            document.getElementById("subtitle").textContent = 
+                variants.amounts[rnd % variants.amounts.length];
+            document.getElementById("cta-text").textContent = 
+                variants.ctaTexts[rnd % variants.ctaTexts.length];
+            document.getElementById("cta-button").innerHTML = 
+                variants.buttonTexts[rnd % variants.buttonTexts.length];
+            
+            // Fake IP anzeigen (echte IP braucht Backend)
+            document.getElementById("user-ip").textContent = 
+                `192.168.${Math.floor(Math.random() * 255)}.XXX`;
         }
 
-        // Countdown-Timer (Fake)
+        // Countdown-Timer
         let time = 300;
         const timer = setInterval(() => {
-            const minutes = Math.floor(time / 60);
-            let seconds = time % 60;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-            document.getElementById('countdown').innerHTML = `${minutes}:${seconds}`;
+            const mins = Math.floor(time / 60);
+            const secs = time % 60;
+            document.getElementById("countdown").textContent = 
+                `${mins}:${secs < 10 ? '0' + secs : secs}`;
             time--;
             if (time < 0) clearInterval(timer);
         }, 1000);
 
-        // Fake User-Count (steigt zufällig)
-        setInterval(() => {
-            const userCount = document.getElementById('user-count');
-            let count = parseInt(userCount.innerText) + Math.floor(Math.random() * 3);
-            userCount.innerText = count;
-        }, 5000);
-
-        // Beim Laden zufällige Inhalte anzeigen
-        window.onload = randomizeContent;
+        // Beim Start
+        loadRandomVariant();
     </script>
 </body>
 </html>
