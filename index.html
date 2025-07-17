@@ -2,48 +2,53 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Weiterleitung gestartet...</title>
-  <script>
-    // Nach 2 Sekunden neuen Tab öffnen
-    setTimeout(function() {
-      window.open("https://lltrco.com/?r=sandyarta", "_blank");
-    }, 2000);
-  </script>
+  <title>Starte dein Angebot...</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #f2f2f2;
       text-align: center;
       padding-top: 100px;
-      color: #333;
+      color: #222;
     }
     .box {
       background: #fff;
       padding: 30px;
-      display: inline-block;
       border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    a.button {
+    .button {
       display: inline-block;
       margin-top: 20px;
-      padding: 12px 25px;
-      background-color: #28a745;
-      color: #fff;
+      padding: 14px 28px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
       text-decoration: none;
+      border: none;
       border-radius: 6px;
-      font-weight: bold;
+      cursor: pointer;
     }
-    a.button:hover {
-      background-color: #218838;
+    .button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
   <div class="box">
-    <h1>Dein Angebot öffnet sich in einem neuen Tab…</h1>
-    <p>Falls das nicht automatisch passiert, klicke hier:</p>
-    <a class="button" href="https://lltrco.com/?r=sandyarta" target="_blank">Jetzt manuell öffnen</a>
+    <h1>Dein Angebot ist bereit</h1>
+    <p>Bitte klicke auf den Button unten, um dein exklusives Angebot zu öffnen:</p>
+    <button class="button" onclick="openOffer()">Jetzt Angebot öffnen</button>
   </div>
+
+  <script>
+    function openOffer() {
+      const newTab = window.open("https://lltrco.com/?r=sandyarta", "_blank");
+      if (!newTab || newTab.closed || typeof newTab.closed == 'undefined') {
+        alert("Bitte aktiviere Popups für diese Seite, damit das Angebot geöffnet werden kann.");
+      }
+    }
+  </script>
 </body>
 </html>
