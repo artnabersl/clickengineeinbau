@@ -2,121 +2,142 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earn $100 Daily - Or Stay Broke?</title>
+    <title>Earn $100 Daily - Limited Offer!</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #434343 100%);
+            font-family: 'Arial Black', sans-serif;
+            background: #111;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            color: white;
             text-align: center;
+            color: white;
         }
         .container {
             max-width: 600px;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
-        .title {
-            font-size: 48px;
-            font-weight: 900;
-            color: #FFD700;
-            margin: 0;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-        }
-        .subtitle {
-            font-size: 72px;
-            font-weight: 900;
-            color: #FF6B00;
-            margin: 10px 0;
-            text-shadow: 0 0 15px rgba(255, 107, 0, 0.7);
-        }
-        .challenge-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: #FF0000;
-            margin: 20px 0;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+        .title { font-size: 48px; font-weight: 900; margin: 0; }
+        .subtitle { font-size: 72px; font-weight: 900; margin: 10px 0; }
+        .cta-text { font-size: 24px; margin: 20px 0; }
         .cta-button {
             display: inline-block;
-            margin: 20px auto;
             padding: 18px 40px;
-            background: linear-gradient(90deg, #FF0000 0%, #FF6B00 100%);
-            color: white;
             font-size: 24px;
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
-            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.3s;
         }
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 0, 0, 0.7);
-        }
-        .disclaimer {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.6);
-            margin-top: 30px;
-        }
+        .cta-button:hover { transform: translateY(-5px); }
+        .disclaimer { font-size: 14px; opacity: 0.8; margin-top: 30px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">EARN</h1>
-        <h2 class="subtitle">$100</h2>
-        <h1 class="title">DAILY</h1>
+    <div class="container" id="main-container">
+        <h1 class="title" id="title">EARN</h1>
+        <h2 class="subtitle" id="subtitle">$100</h2>
+        <h1 class="title" id="title2">DAILY</h1>
         
-        <!-- PROVOCATIVE CHALLENGE -->
-        <div class="challenge-text">
-            ⚠️ ARE YOU TOO SCARED TO CLICK?  
-            <br>
-            <span style="font-size: 18px;">(Most people are... but winners take action!)</span>
-        </div>
+        <p class="cta-text" id="cta-text">Start today - it's free</p>
         
-        <!-- AGGRESSIVE CTA BUTTON -->
-        <a href="https://lltrco.com/?r=sandyarta" target="_blank" class="cta-button">
-            👉 PROVE YOU'RE NOT BROKE - CLAIM YOUR $100 NOW! 👈
+        <a href="https://lltrco.com/?r=sandyarta" target="_blank" class="cta-button" id="cta-button">
+            👉 CLICK HERE TO CLAIM! 👈
         </a>
         
-        <!-- FAKE SOCIAL PROOF -->
-        <div style="margin: 20px 0; font-style: italic;">
-            "I made $327 today - thanks!" <strong>- Mark D., Texas</strong>
-        </div>
-        
-        <!-- FAKE COUNTDOWN -->
-        <div class="disclaimer">
-            ⏳ <strong>WARNING:</strong> Offer closes in <span id="countdown">05:00</span>!  
-            <br>
-            <span style="color: #FFD700;">3 people viewing this right now!</span>
+        <div class="disclaimer" id="disclaimer">
+            ⏳ <span id="countdown">05:00</span> left! Join <span id="user-count">12</span> others!
         </div>
     </div>
 
     <script>
-        // Fake Countdown Timer
+        // Zufällige Farben generieren
+        function getRandomColor() {
+            const colors = [
+                '#FF0000', '#FF6B00', '#FFD700', '#00FF00', 
+                '#00FFFF', '#0066FF', '#9400D3', '#FF00FF'
+            ];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Zufällige Texte rotieren
+        const texts = {
+            titles: [
+                "WANT", "GRAB", "GET", "STEAL", "EARN", "UNLOCK", "SECURE", "TAKE"
+            ],
+            subtitles: [
+                "$100", "$500", "$1K", "CASH", "MONEY", "PROFIT", "WEALTH", "BONUS"
+            ],
+            ctaTexts: [
+                "Start today - it's free!",
+                "97% of people miss this!",
+                "Only for action-takers!",
+                "Your bank account will thank you!",
+                "This is not a drill!",
+                "Limited spots available!",
+                "You qualify for a secret bonus!",
+                "⚠️ WARNING: Earnings may shock you!"
+            ],
+            buttonTexts: [
+                "👉 YES! I WANT FREE MONEY! 👈",
+                "👉 PROVE YOU'RE NOT BROKE! 👈",
+                "👉 CLICK BEFORE IT'S GONE! 👈",
+                "👉 INSTANT PAYOUT GUARANTEED! 👈",
+                "👉 YOUR FUTURE SELF WILL THANK YOU! 👈"
+            ],
+            disclaimers: [
+                "⏳ Offer expires in <span id='countdown'>05:00</span>!",
+                "🔥 <span id='user-count'>27</span> people joined today!",
+                "🚨 Last chance: <span id='countdown'>03:00</span> left!",
+                "💸 <span id='user-count'>8</span> spots remaining!"
+            ]
+        };
+
+        // Zufällige Elemente anzeigen
+        function randomizeContent() {
+            // Farben setzen
+            const mainColor = getRandomColor();
+            const secondaryColor = getRandomColor();
+            document.body.style.background = `linear-gradient(135deg, ${mainColor} 0%, #000 100%)`;
+            document.getElementById('title').style.color = secondaryColor;
+            document.getElementById('subtitle').style.color = getRandomColor();
+            document.getElementById('title2').style.color = secondaryColor;
+            document.getElementById('cta-button').style.background = `linear-gradient(90deg, ${secondaryColor} 0%, ${mainColor} 100%)`;
+
+            // Texte setzen
+            document.getElementById('title').innerText = texts.titles[Math.floor(Math.random() * texts.titles.length)];
+            document.getElementById('subtitle').innerText = texts.subtitles[Math.floor(Math.random() * texts.subtitles.length)];
+            document.getElementById('cta-text').innerText = texts.ctaTexts[Math.floor(Math.random() * texts.ctaTexts.length)];
+            document.getElementById('cta-button').innerHTML = texts.buttonTexts[Math.floor(Math.random() * texts.buttonTexts.length)];
+            document.getElementById('disclaimer').innerHTML = texts.disclaimers[Math.floor(Math.random() * texts.disclaimers.length)];
+        }
+
+        // Countdown-Timer (Fake)
         let time = 300;
-        const countdown = document.getElementById('countdown');
         const timer = setInterval(() => {
             const minutes = Math.floor(time / 60);
             let seconds = time % 60;
             seconds = seconds < 10 ? '0' + seconds : seconds;
-            countdown.innerHTML = `${minutes}:${seconds}`;
+            document.getElementById('countdown').innerHTML = `${minutes}:${seconds}`;
             time--;
             if (time < 0) clearInterval(timer);
         }, 1000);
+
+        // Fake User-Count (steigt zufällig)
+        setInterval(() => {
+            const userCount = document.getElementById('user-count');
+            let count = parseInt(userCount.innerText) + Math.floor(Math.random() * 3);
+            userCount.innerText = count;
+        }, 5000);
+
+        // Beim Laden zufällige Inhalte anzeigen
+        window.onload = randomizeContent;
     </script>
 </body>
 </html>
