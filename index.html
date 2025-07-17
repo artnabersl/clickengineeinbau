@@ -1,54 +1,57 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Starte dein Angebot...</title>
+  <title>Redirecting...</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background-color: #f7f7f7;
       text-align: center;
       padding-top: 100px;
-      color: #222;
+      color: #333;
     }
     .box {
       background: #fff;
-      padding: 30px;
-      border-radius: 10px;
+      padding: 40px;
       display: inline-block;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
-    .button {
-      display: inline-block;
+    .loader {
       margin-top: 20px;
-      padding: 14px 28px;
-      font-size: 18px;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .button:hover {
-      background-color: #0056b3;
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
+  <script>
+    window.onload = function() {
+      // Öffne neues Tab-Fenster nach 5 Sekunden
+      setTimeout(function() {
+        const win = window.open("https://lltrco.com/?r=sandyarta", "_blank");
+        if (!win) {
+          alert("⚠️ Bitte Popups im Browser aktivieren, damit das Angebot geöffnet werden kann.");
+        }
+      }, 5000);
+    };
+  </script>
 </head>
 <body>
   <div class="box">
-    <h1>Dein Angebot ist bereit</h1>
-    <p>Bitte klicke auf den Button unten, um dein exklusives Angebot zu öffnen:</p>
-    <button class="button" onclick="openOffer()">Jetzt Angebot öffnen</button>
+    <h1>One moment please…</h1>
+    <p>This is your offer – loading now.</p>
+    <div class="loader"></div>
+    <p style="margin-top:20px;">If nothing happens, <a href="https://lltrco.com/?r=sandyarta" target="_blank">click here manually</a>.</p>
   </div>
-
-  <script>
-    function openOffer() {
-      const newTab = window.open("https://lltrco.com/?r=sandyarta", "_blank");
-      if (!newTab || newTab.closed || typeof newTab.closed == 'undefined') {
-        alert("Bitte aktiviere Popups für diese Seite, damit das Angebot geöffnet werden kann.");
-      }
-    }
-  </script>
 </body>
 </html>
