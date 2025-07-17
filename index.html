@@ -1,66 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>One Moment Please…</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 60px;
-    }
-    .box {
-      display: inline-block;
-      background-color: #111;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
-    }
-    img {
-      width: 250px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 16px;
-      background: #ff00cc;
-      background: linear-gradient(to right, #ff00cc, #3333ff);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-    .btn:hover {
-      background: linear-gradient(to right, #3333ff, #ff00cc);
-    }
-  </style>
-  <script>
-    // Automatische Weiterleitung nach 5 Sekunden in neuem Tab
-    setTimeout(function() {
-      const win = window.open("https://lltrco.com/?r=sandyarta", "_blank");
-      if (!win) {
-        document.getElementById("fallback").style.display = "block";
-      }
-    }, 5000);
-  </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn $100 Daily - Or Stay Broke?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #434343 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .title {
+            font-size: 48px;
+            font-weight: 900;
+            color: #FFD700;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        .subtitle {
+            font-size: 72px;
+            font-weight: 900;
+            color: #FF6B00;
+            margin: 10px 0;
+            text-shadow: 0 0 15px rgba(255, 107, 0, 0.7);
+        }
+        .challenge-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF0000;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .cta-button {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 18px 40px;
+            background: linear-gradient(90deg, #FF0000 0%, #FF6B00 100%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5);
+            transition: all 0.3s;
+        }
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 0, 0, 0.7);
+        }
+        .disclaimer {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <div class="box">
-    <h1>One moment please…</h1>
-    <p>This is your offer – loading now!</p>
-    <a href="https://lltrco.com/?r=sandyarta" target="_blank">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="Earn $100 Daily – Start Now">
-    </a>
-    <br>
-    <a class="btn" href="https://lltrco.com/?r=sandyarta" target="_blank">🚀 Click to Open Offer</a>
-
-    <div id="fallback" style="display:none; margin-top:20px;">
-      <p><strong>Popup blocked?</strong><br>Click the button above to open the offer manually.</p>
+    <div class="container">
+        <h1 class="title">EARN</h1>
+        <h2 class="subtitle">$100</h2>
+        <h1 class="title">DAILY</h1>
+        
+        <!-- PROVOCATIVE CHALLENGE -->
+        <div class="challenge-text">
+            ⚠️ ARE YOU TOO SCARED TO CLICK?  
+            <br>
+            <span style="font-size: 18px;">(Most people are... but winners take action!)</span>
+        </div>
+        
+        <!-- AGGRESSIVE CTA BUTTON -->
+        <a href="https://lltrco.com/?r=sandyarta" target="_blank" class="cta-button">
+            👉 PROVE YOU'RE NOT BROKE - CLAIM YOUR $100 NOW! 👈
+        </a>
+        
+        <!-- FAKE SOCIAL PROOF -->
+        <div style="margin: 20px 0; font-style: italic;">
+            "I made $327 today - thanks!" <strong>- Mark D., Texas</strong>
+        </div>
+        
+        <!-- FAKE COUNTDOWN -->
+        <div class="disclaimer">
+            ⏳ <strong>WARNING:</strong> Offer closes in <span id="countdown">05:00</span>!  
+            <br>
+            <span style="color: #FFD700;">3 people viewing this right now!</span>
+        </div>
     </div>
-  </div>
+
+    <script>
+        // Fake Countdown Timer
+        let time = 300;
+        const countdown = document.getElementById('countdown');
+        const timer = setInterval(() => {
+            const minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            countdown.innerHTML = `${minutes}:${seconds}`;
+            time--;
+            if (time < 0) clearInterval(timer);
+        }, 1000);
+    </script>
 </body>
 </html>
