@@ -1,148 +1,219 @@
- <!DOCTYPE html> 
-<html> 
-<head> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <title>👉 YOU! YES YOU! CLICK NOW!</title>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Self-Growing Email System | Get 100+ Subscribers/Day</title>
     <style>
-        body { 
-            margin: 0;
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            font-family: 'Arial Black', Impact, sans-serif;
-            background: #000; 
+            background-color: #f9f9f9;
+        }
+        header {
             text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #3498db, #2ecc71);
             color: white;
-            overflow-x: hidden;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3rem;
         }
-        .title { 
-            font-size: 80px; 
-            font-weight: 900; 
-            margin: 0;
-            line-height: 1;
-            text-transform: uppercase;
+        .testimonial {
+            font-style: italic;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
         }
-        .subtitle { 
-            font-size: 120px; 
-            font-weight: 900; 
+        .testimonial:before {
+            content: """;
+            font-size: 60px;
+            color: #3498db;
+            position: absolute;
+            left: 10px;
+            top: -10px;
+        }
+        .cta-section {
+            background: #2c3e50;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 50px 0;
+        }
+        .cta-heading {
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .guarantee-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: bold;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
             margin: 10px 0;
-            line-height: 1;
-            color: #FF0000;
-            text-shadow: 0 0 30px red;
-            animation: pulse 1s infinite alternate;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background: linear-gradient(135deg, #e74c3c, #f39c12);
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 15px;
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .benefits {
+            margin: 40px 0;
+        }
+        .benefit-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .benefit-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #3498db;
+        }
+        .urgency-banner {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+            animation: pulse 2s infinite;
         }
         @keyframes pulse {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
-        }
-        .cta-text { 
-            font-size: 40px;
-            margin: 30px 0;
-            color: #FFD700;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 30px 60px;
-            background: linear-gradient(90deg, #FF0000, #FF6B00);
-            color: white;
-            font-size: 50px;
-            font-weight: 900;
-            text-decoration: none;
-            border-radius: 80px;
-            border: 5px solid white;
-            box-shadow: 0 0 40px red;
-            margin: 40px auto;
-            transition: all 0.2s;
-        }
-        .cta-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 60px #FFD700;
-        }
-        .warning {
-            font-size: 30px;
-            color: red;
-            animation: blink 0.5s infinite alternate;
-        }
-        @keyframes blink {
-            from { opacity: 1; }
-            to { opacity: 0.3; }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <h1 class="title" id="title">WARNING</h1>
-    <h2 class="subtitle" id="subtitle">$100</h2>
-    <h1 class="title" id="title2">DAILY</h1>
-    
-    <p class="cta-text" id="cta-text">YOUR BRAIN IS SCREAMING TO CLICK!</p>
-    
-    <a href="https://lltrco.com/?r=sandyarta" class="cta-button" id="cta-button">
-        👉 SMASH THIS BUTTON NOW! 👈
-    </a>
-    
-    <div class="warning" id="disclaimer">
-        ⚠️ YOUR IP: <span id="user-ip">LOADING...</span> | ⏳ <span id="countdown">05:00</span> LEFT!
+    <header>
+        <h1>🚀 The AI "Set & Forget" System Adding 100+ Subscribers Daily</h1>
+        <p><i>"Finally - An Email List That Grows <u>Itself</u> While You Sleep"</i></p>
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/mFXeN7eR8MVwCLv6K8kT/media/6884f141b88768024de1208b.png" alt="AI Email System" class="hero-image">
+    </header>
+
+    <div class="highlight-box">
+        WARNING: If you're still manually growing your email list in 2024, you're leaving money on the table
     </div>
 
-    <script>
-        // 50+ BRUTALE TEXTVARIANTEN
-        const variants = {
-            titles: [
-                "WARNING", "ALERT", "ATTENTION", "CRITICAL", "URGENT", 
-                "FINAL NOTICE", "LAST CHANCE", "DO NOT IGNORE", "HOLY SHIT"
-            ],
-            amounts: [
-                "$100", "$500", "$1,000", "$5,000", "CASH", "MILLIONS", 
-                "A FORTUNE", "YOUR DREAM LIFE", "FUCK YOU MONEY"
-            ],
-            ctaTexts: [
-                "YOUR BRAIN IS SCREAMING TO CLICK!",
-                "THIS BUTTON WILL CHANGE YOUR LIFE!",
-                "YOU'RE 1 CLICK FROM BEING RICH!",
-                "YOUR FUTURE SELF WILL HATE YOU IF YOU DON'T!",
-                "EVERY SECOND YOU WAIT = $10 LOST!",
-                "BANKS HATE THIS BUTTON!",
-                "THIS IS ILLEGAL IN 17 COUNTRIES!",
-                "YOUR MOUSE IS MAGNETICALLY PULLED HERE!"
-            ],
-            buttonTexts: [
-                "👉 SMASH THIS BUTTON NOW! 👈",
-                "👉 PROVE YOU'RE NOT A LOSER! 👈",
-                "👉 CLICK OR DIE POOR! 👈",
-                "👉 YOUR EX WILL CRY WHEN YOU CLICK! 👈",
-                "👉 THIS BUTTON SMELLS LIKE MONEY! 👈"
-            ]
-        };
+    <section>
+        <p>While most marketers waste time chasing algorithms and paid ads...</p>
+        <p><b>Our students are quietly banking $10,000+ months</b> with self-filling email lists powered by AI automation.</p>
+        
+        <div class="testimonial">
+            "This system generated $94,113 in 11 weeks while we built it LIVE. Now it works even better with new AI tools. If you're not using this, you're working too hard for inferior results."
+        </div>
+        
+        <div class="benefits">
+            <div class="benefit-item">
+                <div class="benefit-icon">⏱️</div>
+                <div>
+                    <h3>30 Minutes/Day Max</h3>
+                    <p>AI handles 95% of the work while you focus on profits</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">📈</div>
+                <div>
+                    <h3>Proven 87% Conversion Rate</h3>
+                    <p>Our AI-optimized sequences outperform human copy</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">🤖</div>
+                <div>
+                    <h3>No Tech Skills Needed</h3>
+                    <p>Set up in <u>one afternoon</u> - even if you're not "techy"</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Zufällige Variante laden
-        function loadRandomVariant() {
-            const rnd = Math.floor(Math.random() * 50); // 50 Kombinationen
-            
-            document.getElementById("title").textContent = 
-                variants.titles[rnd % variants.titles.length];
-            document.getElementById("subtitle").textContent = 
-                variants.amounts[rnd % variants.amounts.length];
-            document.getElementById("cta-text").textContent = 
-                variants.ctaTexts[rnd % variants.ctaTexts.length];
-            document.getElementById("cta-button").innerHTML = 
-                variants.buttonTexts[rnd % variants.buttonTexts.length];
-            
-            // Fake IP anzeigen (echte IP braucht Backend)
-            document.getElementById("user-ip").textContent = 
-                `192.168.${Math.floor(Math.random() * 255)}.XXX`;
-        }
+    <div class="urgency-banner">
+        ⚠️ LIMITED ACCESS: We're capping enrollment at 100 users this month
+    </div>
 
-        // Countdown-Timer
-        let time = 300;
-        const timer = setInterval(() => {
-            const mins = Math.floor(time / 60);
-            const secs = time % 60;
-            document.getElementById("countdown").textContent = 
-                `${mins}:${secs < 10 ? '0' + secs : secs}`;
-            time--;
-            if (time < 0) clearInterval(timer);
-        }, 1000);
+    <section class="cta-section">
+        <h2 class="cta-heading">Ready To Automate Your Growth?</h2>
+        <p><b>Join Now And Get:</b></p>
+        <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+            <li>The exact AI setup we used for $94,113</li>
+            <li>Done-for-you email templates</li>
+            <li>24/7 subscriber acquisition</li>
+            <li>Private training portal</li>
+        </ul>
 
-        // Beim Start
-        loadRandomVariant();
-    </script>
+        <div class="guarantee-badge">
+            TRY RISK-FREE FOR 7 DAYS
+        </div>
+
+        <form method="post" action="https://www.sendsteed.com/subscribe/">
+            <input name="e110170" required type="email" placeholder="Enter Your Best Email...">
+            <input name="n110170" required type="text" placeholder="Your First Name">
+            <input type="hidden" name="lllid" value="110170">
+            <input type="hidden" name="lluid" value="sandyarta">
+            <button type="submit">START MY FREE TRIAL →</button>
+        </form>
+        <p style="font-size: 12px; opacity: 0.8;">We respect your privacy. Unsubscribe anytime.</p>
+    </section>
 </body>
 </html>
